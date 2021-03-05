@@ -1,0 +1,11 @@
+body{
+    background-color:darkslategray;
+}
+h1{
+    color:darkturquoise;
+}
+p{
+    color: darkgoldenrod;
+    font-size: 4ch;
+    font-style: italic;
+}
