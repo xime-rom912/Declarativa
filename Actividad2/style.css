@@ -1,0 +1,13 @@
+body{
+    background-color:rgb(43, 9, 122);
+}
+img{
+    background-color: white;
+    width: 150px;float:right;
+}
+p{
+    color: rgb(44, 202, 230);   
+    font-style: italic;
+    font-size:x-large;
+}
+        
