@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones</title>
+    <style>
+        select{font-size: x-large;color: crimson;background: darkslategray;}
+        button{font-size: x-large;color: rgb(79, 18, 104);background: hotpink;}
+        body{background: lightblue;}
+        p{color: lightseagreen;font-size: xx-large;font-style: italic;}
+    </style>
+</head>
+<body>
+    <p>Escribe el primer numero</p>
+    <input type="number" id="numero1" style="font-style: italic;font-size: xx-large;color: lime;">
+    <p>Escribe el segundo numero</p>
+    <input type="number" id="numero2" style="font-style: italic;font-size: xx-large;color: lime;">
+    <p>Selecciona la operacion</p>
+    <select id="opcion">
+        <option value="1">Sumar</option>
+        <option value="2">Restar</option>
+        <option value="3">Multiplicar</option>
+    </select>
+    <button onclick="operacion()">Calcular</button>
+    <p id=resultado style="color: maroon;font-size: 45px;"></p>
+    <script>
+        const operacion = (numero1,numero2,opcion) => {
+            numero1 = document.getElementById("numero1").value;
+            numero2 = document.getElementById("numero2").value;
+            opcion = document.getElementById("opcion").value;
+            if(opcion == 1){
+                let resultado = parseInt(numero1) + parseInt(numero2);
+                document.getElementById("resultado").innerHTML = resultado;
+            }else if(opcion == 2){
+                let resultado = parseInt(numero1) - parseInt(numero2);
+                document.getElementById("resultado").innerHTML = resultado;
+            }else {
+                let resultado = parseInt(numero1) * parseInt(numero2);
+                document.getElementById("resultado").innerHTML = resultado;
+            }
+        }
+    </script>	
+</body>
+</html>
