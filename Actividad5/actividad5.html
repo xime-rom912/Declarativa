@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar fecha</title>
+</head>
+<body>
+    <button onclick="mostrarFecha()" style="background: coral;font-size: x-large;">Click para mostrar la fecha</button>
+    <p id="fecha" style="font-style: italic;font-size: xx-large;">Aqui se muestra la fecha</p>
+    <script>
+        mostrarFecha = () => {
+            document.getElementById('fecha').innerHTML =  Date();
+        }
+    </script>
+</body>
+</html>
