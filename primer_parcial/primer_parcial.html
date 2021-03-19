@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billar</title>
+    <style>
+        body{background-color:lightslategray;}
+        th{font-size: x-large;color: maroon;}
+        td{color: rgb(59, 6, 70); border:2px;border-style: groove;border-color: rgb(8, 3, 68);}
+        img{width: 250px;float:left;}
+    </style>
+</head>
+<body>
+    <table class="default">
+        <tr>
+          <th>Mesa 1</td>
+          <th>Mesa 2</td>
+          <th>Mesa 3</td>
+        </tr>
+        <tr>
+          <td><img src="mesaOff.jpg" onclick="cambiarImagen(1);" id="1"></td>
+          <td><img src="mesaOff.jpg" onclick="cambiarImagen(2);" id="2"></td>
+          <td><img src="mesaOff.jpg" onclick="cambiarImagen(3);" id="3"></td>
+        </tr>
+        <tr>
+            <td>
+                <p id="i1">Hora de Inicio: </p>
+                <p id="f1">Hora de Final: </p>
+                <p id="t1">Total: </p>
+            </td>
+            <td>
+                <p id="i2">Hora de Inicio: </p>
+                <p id="f2">Hora de Final: </p>
+                <p id="t2">Total: </p>
+            </td>
+            <td>
+                <p id="i3">Hora de Inicio: </p>
+                <p id="f3">Hora de Final: </p>
+                <p id="t3">Total: </p>
+            </td>
+        </tr>
+        <tr>
+            <th>Mesa 4</td>
+            <th>Mesa 5</td>
+            <th>Mesa 6</td>
+        </tr>
+        <tr>
+            <td><img src="mesaOff.jpg" onclick="cambiarImagen(4);" id="4"></td>
+            <td><img src="mesaOff.jpg" onclick="cambiarImagen(5);" id="5"></td>
+            <td><img src="mesaOff.jpg" onclick="cambiarImagen(6);" id="6"></td>
+        </tr>
+        <tr>
+            <td>
+                <p id="i4">Hora de Inicio: </p>
+                <p id="f4">Hora de Final: </p>
+                <p id="t4">Total: </p>
+            </td>
+            <td>
+                <p id="i5">Hora de Inicio: </p>
+                <p id="f5">Hora de Final: </p>
+                <p id="t5">Total: </p>
+            </td>
+            <td>
+                <p id="i6">Hora de Inicio: </p>
+                <p id="f6">Hora de Final: </p>
+                <p id="t6">Total: </p>
+            </td>
+        </tr>
+      </table>
+      <script>
+        let horai = 0 
+        let horaf = 0;
+        const cambiarImagen = (mesaFoco) => {
+            let foco;
+            switch(mesaFoco){
+                case 1:
+                    foco = document.getElementById("1");
+                    if(foco.src.match('mesaOff')){
+                        foco.src = "mesaOn.jpg";
+                        horai = new Date();
+                        document.getElementById("i1").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        document.getElementById("f1").innerHTML = "Hora de Final: ";
+                        document.getElementById("t1").innerHTML = "Total: ";
+                    }else {
+                        horaf = new Date();
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("f1").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
+                        document.getElementById("t1").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                    }
+                break;
+                case 2:
+                    foco = document.getElementById("2");
+                    if(foco.src.match('mesaOff')){
+                        foco.src = "mesaOn.jpg";
+                        horai = new Date();
+                        document.getElementById("i2").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        document.getElementById("f2").innerHTML = "Hora de Final: ";
+                        document.getElementById("t2").innerHTML = "Total: ";
+                    }else {
+                        horaf = new Date();
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("f2").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
+                        document.getElementById("t2").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                    }
+                break;
+                case 3:
+                    foco = document.getElementById("3");
+                    if(foco.src.match('mesaOff')){
+                        foco.src = "mesaOn.jpg";
+                        horai = new Date();
+                        document.getElementById("i3").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        document.getElementById("f3").innerHTML = "Hora de Final: ";
+                        document.getElementById("t3").innerHTML = "Total: ";
+                    }else {
+                        horaf = new Date();
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("f3").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
+                        document.getElementById("t3").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                    }
+                break;
+                case 4:
+                    foco = document.getElementById("4");
+                    if(foco.src.match('mesaOff')){
+                        foco.src = "mesaOn.jpg";
+                        horai = new Date();
+                        document.getElementById("i4").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        document.getElementById("f4").innerHTML = "Hora de Final: ";
+                        document.getElementById("t4").innerHTML = "Total: ";
+                    }else {
+                        horaf = new Date();
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("f4").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
+                        document.getElementById("t4").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                    }
+                break;
+                case 5:
+                    foco = document.getElementById("5");
+                    if(foco.src.match('mesaOff')){
+                        foco.src = "mesaOn.jpg";
+                        horai = new Date();
+                        document.getElementById("i5").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        document.getElementById("f5").innerHTML = "Hora de Final: ";
+                        document.getElementById("t5").innerHTML = "Total: ";
+                    }else {
+                        horaf = new Date();
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("f5").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
+                        document.getElementById("t5").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                    }
+                break;
+                case 6:
+                    foco = document.getElementById("6");
+                    if(foco.src.match('mesaOff')){
+                        foco.src = "mesaOn.jpg";
+                        horai = new Date();
+                        document.getElementById("i6").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        document.getElementById("f6").innerHTML = "Hora de Final: ";
+                        document.getElementById("t6").innerHTML = "Total: ";
+                    }else {
+                        horaf = new Date();
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("f6").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
+                        document.getElementById("t6").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                    }
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
