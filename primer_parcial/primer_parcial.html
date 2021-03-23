@@ -72,6 +72,7 @@
       <script>
         let horai = [0,0,0,0,0,0]; 
         let horaf = [0,0,0,0,0,0];
+        var total = 0.0;
         const cambiarImagen = (mesaFoco) => {
             let foco;
             switch(mesaFoco){
@@ -85,8 +86,12 @@
                         document.getElementById("t1").innerHTML = "Total: ";
                     }else {
                         horaf[0] = new Date();
+                        document.getElementById("f1").innerHTML = "Hora de Final: "+ horaf[0].getHours()+" : "+horaf[0].getMinutes();
+                        total += (horaf[0].getHours() - horai[0].getHours()) * 60;
+                        total += horaf[0].getMinutes() - horai[0].getMinutes();
+                        total /= 60;
                         foco.src = "mesaOff.jpg";
-                        document.getElementById("f1").innerHTML = "Hora de Final: "+ horaf[0].getHours()+" : "+horaf[0].getHours();
+                        document.getElementById("t1").innerHTML = "Total: " + total * 50;
                     }
                 break;
                 case 2:
@@ -99,9 +104,12 @@
                         document.getElementById("t2").innerHTML = "Total: ";
                     }else {
                         horaf[1] = new Date();
-                        foco.src = "mesaOff.jpg";
                         document.getElementById("f2").innerHTML = "Hora de Final: "+ horaf[1].getHours()+" : "+horaf[1].getMinutes();
-                        document.getElementById("t2").innerHTML = "Total: " + ((horaf[1].getHours() - horai[1].getHours()) * 50);
+                        total += (horaf[1].getHours() - horai[1].getHours()) * 60;
+                        total += horaf[1].getMinutes() - horai[1].getMinutes();
+                        total /= 60;
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("t2").innerHTML = "Total: " + total * 50;
                     }
                 break;
                 case 3:
@@ -114,9 +122,12 @@
                         document.getElementById("t3").innerHTML = "Total: ";
                     }else {
                         horaf[2] = new Date();
-                        foco.src = "mesaOff.jpg";
                         document.getElementById("f3").innerHTML = "Hora de Final: "+ horaf[2].getHours()+" : "+horaf[2].getMinutes();
-                        document.getElementById("t3").innerHTML = "Total: " + ((horaf[2].getHours() - horai[2].getHours()) * 50);
+                        total += (horaf[2].getHours() - horai[2].getHours()) * 60;
+                        total += horaf[2].getMinutes() - horai[2].getMinutes();
+                        total /= 60;
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("t3").innerHTML = "Total: " + total * 50;
                     }
                 break;
                 case 4:
@@ -129,9 +140,12 @@
                         document.getElementById("t4").innerHTML = "Total: ";
                     }else {
                         horaf[3] = new Date();
-                        foco.src = "mesaOff.jpg";
                         document.getElementById("f4").innerHTML = "Hora de Final: "+ horaf[3].getHours()+" : "+horaf[3].getMinutes();
-                        document.getElementById("t4").innerHTML = "Total: " + ((horaf[3].getHours() - horai[3].getHours()) * 50);
+                        total += (horaf[3].getHours() - horai[3].getHours()) * 60;
+                        total += horaf[3].getMinutes() - horai[3].getMinutes();
+                        total /= 60;
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("t4").innerHTML = "Total: " + total * 50;
                     }
                 break;
                 case 5:
@@ -144,9 +158,12 @@
                         document.getElementById("t5").innerHTML = "Total: ";
                     }else {
                         horaf[4] = new Date();
-                        foco.src = "mesaOff.jpg";
                         document.getElementById("f5").innerHTML = "Hora de Final: "+ horaf[4].getHours()+" : "+horaf[4].getMinutes();
-                        document.getElementById("t5").innerHTML = "Total: " + ((horaf[4].getHours() - horai[4].getHours()) * 50);
+                        total += (horaf[4].getHours() - horai[4].getHours()) * 60;
+                        total += horaf[4].getMinutes() - horai[4].getMinutes();
+                        total /= 60;
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("t5").innerHTML = "Total: " + total * 50;
                     }
                 break;
                 case 6:
@@ -159,9 +176,12 @@
                         document.getElementById("t6").innerHTML = "Total: ";
                     }else {
                         horaf[5] = new Date();
-                        foco.src = "mesaOff.jpg";
                         document.getElementById("f6").innerHTML = "Hora de Final: "+ horaf[5].getHours()+" : "+horaf[5].getMinutes();
-                        document.getElementById("t6").innerHTML = "Total: " + ((horaf[5].getHours() - horai[5].getHours()) * 50);
+                        total += (horaf[5].getHours() - horai[5].getHours()) * 60;
+                        total += horaf[5].getMinutes() - horai[5].getMinutes();
+                        total /= 60;
+                        foco.src = "mesaOff.jpg";
+                        document.getElementById("t6").innerHTML = "Total: " + total * 50;
                     }
                 break;
             }
