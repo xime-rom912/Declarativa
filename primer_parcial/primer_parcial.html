@@ -70,8 +70,8 @@
         </tr>
       </table>
       <script>
-        let horai = 0 
-        let horaf = 0;
+        let horai = [0,0,0,0,0,0]; 
+        let horaf = [0,0,0,0,0,0];
         const cambiarImagen = (mesaFoco) => {
             let foco;
             switch(mesaFoco){
@@ -79,90 +79,89 @@
                     foco = document.getElementById("1");
                     if(foco.src.match('mesaOff')){
                         foco.src = "mesaOn.jpg";
-                        horai = new Date();
-                        document.getElementById("i1").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        horai[0] = new Date();
+                        document.getElementById("i1").innerHTML = "Hora de Inicio: "+ horai[0].getHours()+" : "+horai[0].getMinutes();
                         document.getElementById("f1").innerHTML = "Hora de Final: ";
                         document.getElementById("t1").innerHTML = "Total: ";
                     }else {
-                        horaf = new Date();
+                        horaf[0] = new Date();
                         foco.src = "mesaOff.jpg";
-                        document.getElementById("f1").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
-                        document.getElementById("t1").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                        document.getElementById("f1").innerHTML = "Hora de Final: "+ horaf[0].getHours()+" : "+horaf[0].getHours();
                     }
                 break;
                 case 2:
                     foco = document.getElementById("2");
                     if(foco.src.match('mesaOff')){
                         foco.src = "mesaOn.jpg";
-                        horai = new Date();
-                        document.getElementById("i2").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        horai[1] = new Date();
+                        document.getElementById("i2").innerHTML = "Hora de Inicio: "+ horai[1].getHours()+" : "+horai[1].getMinutes();
                         document.getElementById("f2").innerHTML = "Hora de Final: ";
                         document.getElementById("t2").innerHTML = "Total: ";
                     }else {
-                        horaf = new Date();
+                        horaf[1] = new Date();
                         foco.src = "mesaOff.jpg";
-                        document.getElementById("f2").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
-                        document.getElementById("t2").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                        document.getElementById("f2").innerHTML = "Hora de Final: "+ horaf[1].getHours()+" : "+horaf[1].getMinutes();
+                        document.getElementById("t2").innerHTML = "Total: " + ((horaf[1].getHours() - horai[1].getHours()) * 50);
                     }
                 break;
                 case 3:
                     foco = document.getElementById("3");
                     if(foco.src.match('mesaOff')){
                         foco.src = "mesaOn.jpg";
-                        horai = new Date();
-                        document.getElementById("i3").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        horai[2] = new Date();
+                        document.getElementById("i3").innerHTML = "Hora de Inicio: "+ horai[2].getHours()+" : "+horai[2].getMinutes();
                         document.getElementById("f3").innerHTML = "Hora de Final: ";
                         document.getElementById("t3").innerHTML = "Total: ";
                     }else {
-                        horaf = new Date();
+                        horaf[2] = new Date();
                         foco.src = "mesaOff.jpg";
-                        document.getElementById("f3").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
-                        document.getElementById("t3").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                        document.getElementById("f3").innerHTML = "Hora de Final: "+ horaf[2].getHours()+" : "+horaf[2].getMinutes();
+                        document.getElementById("t3").innerHTML = "Total: " + ((horaf[2].getHours() - horai[2].getHours()) * 50);
                     }
                 break;
                 case 4:
                     foco = document.getElementById("4");
                     if(foco.src.match('mesaOff')){
                         foco.src = "mesaOn.jpg";
-                        horai = new Date();
-                        document.getElementById("i4").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        horai[3] = new Date();
+                        document.getElementById("i4").innerHTML = "Hora de Inicio: "+ horai[3].getHours()+" : "+horai[3].getMinutes();
                         document.getElementById("f4").innerHTML = "Hora de Final: ";
                         document.getElementById("t4").innerHTML = "Total: ";
                     }else {
-                        horaf = new Date();
+                        horaf[3] = new Date();
                         foco.src = "mesaOff.jpg";
-                        document.getElementById("f4").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
-                        document.getElementById("t4").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                        document.getElementById("f4").innerHTML = "Hora de Final: "+ horaf[3].getHours()+" : "+horaf[3].getMinutes();
+                        document.getElementById("t4").innerHTML = "Total: " + ((horaf[3].getHours() - horai[3].getHours()) * 50);
                     }
                 break;
                 case 5:
                     foco = document.getElementById("5");
                     if(foco.src.match('mesaOff')){
                         foco.src = "mesaOn.jpg";
-                        horai = new Date();
-                        document.getElementById("i5").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        horai[4] = new Date();
+                        document.getElementById("i5").innerHTML = "Hora de Inicio: "+ horai[4].getHours()+" : "+horai[4].getMinutes();
                         document.getElementById("f5").innerHTML = "Hora de Final: ";
                         document.getElementById("t5").innerHTML = "Total: ";
                     }else {
-                        horaf = new Date();
+                        horaf[4] = new Date();
                         foco.src = "mesaOff.jpg";
-                        document.getElementById("f5").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
-                        document.getElementById("t5").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                        document.getElementById("f5").innerHTML = "Hora de Final: "+ horaf[4].getHours()+" : "+horaf[4].getMinutes();
+                        document.getElementById("t5").innerHTML = "Total: " + ((horaf[4].getHours() - horai[4].getHours()) * 50);
                     }
                 break;
                 case 6:
                     foco = document.getElementById("6");
                     if(foco.src.match('mesaOff')){
                         foco.src = "mesaOn.jpg";
-                        horai = new Date();
-                        document.getElementById("i6").innerHTML = "Hora de Inicio: "+ horai.getHours()+" : "+horai.getMinutes();
+                        horai[5] = new Date();
+                        document.getElementById("i6").innerHTML = "Hora de Inicio: "+ horai[5].getHours()+" : "+horai[5].getMinutes();
                         document.getElementById("f6").innerHTML = "Hora de Final: ";
                         document.getElementById("t6").innerHTML = "Total: ";
                     }else {
-                        horaf = new Date();
+                        horaf[5] = new Date();
                         foco.src = "mesaOff.jpg";
-                        document.getElementById("f6").innerHTML = "Hora de Final: "+ horaf.getHours()+" : "+horaf.getMinutes();
-                        document.getElementById("t6").innerHTML = "Total: " + (horaf.getHours() - horai.getHours()) * 50;
+                        document.getElementById("f6").innerHTML = "Hora de Final: "+ horaf[5].getHours()+" : "+horaf[5].getMinutes();
+                        document.getElementById("t6").innerHTML = "Total: " + ((horaf[5].getHours() - horai[5].getHours()) * 50);
                     }
                 break;
             }
