@@ -9,11 +9,11 @@ all("Levantarse",5000, (homework)=>{
         console.log(`Realizando la tarea ${homework}`)
         all("Bañarse",3000, (homework)=>{
             console.log(`Realizando la tarea ${homework}`)
-            all("Clase de Paradigmas",8000, (homework)=>{
+            all("Clase de Paradigmas",5000, (homework)=>{
                 console.log(`Realizando la tarea ${homework}`)
-                all("Desayunar",10000, (homework)=>{
+                all("Desayunar",8000, (homework)=>{
                     console.log(`Realizando la tarea ${homework}`)
-                    all("Jugar Videojuegos",5000, (homework)=>{
+                    all("Jugar Videojuegos",10000, (homework)=>{
                         console.log(`Realizando la tarea ${homework}`)
                     })
                 })
