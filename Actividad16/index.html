@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 16</title>
+    <style>
+        button{font-size: x-large;color: rgb(51, 192, 228);background: rgb(79, 18, 104);}
+        input{font-size: x-large;color: rgb(144, 0, 240);font-style: italic;}
+        p{font-size: x-large;color: rgb(34, 10, 99);font-style: oblique;}
+        h1{font-size: xx-large;color: rgb(226, 55, 92);font-style:initial}
+        body{background-color: aquamarine;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>Materia: {{materia}}</p>
+        <p>Semestre: {{semestre}}</p>
+        <p>Carrera: {{carrera}}</p>
+        
+        <hr>
+        <p>
+            <input type="text" v-model="producto" @keyup.enter="agregarProducto">
+            <button @Click="agregarProducto">Agregar</button>
+        </p>
+        <p>
+            {{voltearTexto}}
+        </p>
+        <ul v-for="producto in productos">
+            <li>
+                <input type="number" v-model.number="producto.cantidad">
+                {{producto.nombre}}  | {{producto.cantidad}} 
+
+                <button @click="producto.cantidad++">+</button>
+                <button @click="producto.cantidad--">-</button>
+
+                <span v-if="producto.cantidad<=0">Sin stock</span>
+            </li>
+        </ul>
+
+        <h1>Total: {{total}}</h1>
+    </div>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+</html>
