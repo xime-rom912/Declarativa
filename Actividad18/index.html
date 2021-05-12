@@ -7,16 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-
     <div id="app">
-        {{estatus}}
-        <img :src="estatus ? 'images/focoOff.png' : 'images/focoOn.png'" @click="estatus = !estatus">
-   
+        <button @click="obtenerUsuarios">Obtener Usuarios</button>
+
+        <ul v-for="usuario in usuarios">
+            <li>
+                {{usuario.name}} - {{usuario.company.name}}
+            </li>
+        </ul>
         <hr>
-
-        <img :src="imagen" @click="cambiarEstatus">
+        <ul v-for="usuario in usuarios2">
+            <li>
+                {{usuario.name}} - {{usuario.company.name}}
+            </li>
+        </ul>
     </div>
-
     <script src="https://unpkg.com/vue@next"></script>
     <script src="script.js"></script>
 </body>
